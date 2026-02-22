@@ -26,6 +26,7 @@ echo ""
 # --- Check that all knowledge files exist and are non-empty ---
 
 KNOWLEDGE_FILES=(
+  "knowledge/intro.md"
   "knowledge/nvc-overview.md"
   "knowledge/four-components.md"
   "knowledge/principles.md"
