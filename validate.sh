@@ -33,6 +33,9 @@ KNOWLEDGE_FILES=(
   "knowledge/examples.md"
   "knowledge/catalogs/feelings.yaml"
   "knowledge/catalogs/needs.yaml"
+  "knowledge/message-transformation-guide.md"
+  "knowledge/trainer-guide.md"
+  "knowledge/political-debate-guide.md"
   "knowledge/README.md"
 )
 

@@ -26,12 +26,12 @@ Planned MCP tools beyond the current `thought_clarifier`.
 
 ---
 
-## Module 4: Political Talk Show
+## Module 4: Political Talk Show ✅
 
-**Tool**: `political_debate`
+**Tool**: `political_debate` — **Implemented**
 
-**Input**: `{ party_programs: string[] }` — summaries or excerpts from political party programs
+**Input**: `{ party1: string, party2: string, topics: string[] (1–10), search?: boolean }` — two party names, debate topics, and optional web search for latest positions.
 
-**Behavior**: Simulates a structured debate between the parties where each side presents its positions using NVC. Transforms adversarial talking points into empathic dialogue that surfaces the underlying needs and values of each position.
+**Behavior**: Simulates a structured NVC debate between two political parties. For each topic, proceeds through four phases: Position Mapping (observation-level summaries), Needs Excavation (mapping positions to the needs catalog), Empathic Dialogue (each party speaks in four-component NVC), and Common Ground (shared needs, divergent strategies, genuine tensions). Concludes with a cross-topic synthesis and reflection prompt. When `search` is enabled, instructs the host LLM to look up current party positions before generating.
 
-**Use case**: "Simulate a debate between these three party platforms, conducted in NVC."
+**Use case**: "Simulate a debate between the Democrats and Republicans on healthcare and immigration, using NVC."
