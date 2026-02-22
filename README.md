@@ -1,8 +1,18 @@
 # NVC MCP Server
 
-An MCP (Model Context Protocol) server that gives any compatible LLM client — Claude Desktop, Claude Code, etc. — access to Nonviolent Communication tools and knowledge.
+An MCP (Model Context Protocol) server that gives any compatible LLM client — Claude Desktop, ChatGPT, Cursor, VS Code, and many more — access to Nonviolent Communication tools and knowledge.
 
 No API keys. No external calls. The server bundles a curated NVC knowledge base and returns structured prompts that guide the host LLM through NVC analysis.
+
+## Try It
+
+It's on npm and works with any MCP client:
+
+```bash
+npx non-violant-communicator
+```
+
+Tell the LLM what's bugging you, paste a difficult email, or practice NVC building blocks — five tools are ready to go. Found something to improve? Use the built-in `submit_feedback` tool.
 
 ## Quick Start
 
@@ -38,6 +48,36 @@ Add to your `.claude/settings.json` or project settings:
 }
 ```
 
+### ChatGPT (via MCP SuperAssistant)
+
+The lowest barrier — works with free ChatGPT, no paid plan required.
+
+1. Install the [MCP SuperAssistant](https://chromewebstore.google.com/detail/mcp-superassistant-connec/mfhcomhojadkgajmbgkjoeipbfpinnkf) Chrome extension
+2. Create a `mcpconfig.json` file:
+
+```json
+{
+  "mcpServers": {
+    "nvc": {
+      "command": "npx",
+      "args": ["non-violant-communicator"]
+    }
+  }
+}
+```
+
+3. Run the proxy:
+
+```bash
+npx @srbhptl39/mcp-superassistant-proxy@latest --config ./mcpconfig.json
+```
+
+4. Open ChatGPT — the NVC tools appear in the extension sidebar.
+
+### ChatGPT Developer Mode
+
+ChatGPT Pro, Plus, Business, Enterprise, and Edu plans have native MCP support, but it requires a remote HTTP endpoint. Bridges like `mcp-remote` or tunnels like `ngrok` can expose a local stdio server — see their respective docs for setup.
+
 ### Run locally (development)
 
 ```bash
@@ -47,6 +87,21 @@ npm install
 node src/index.js
 ```
 
+## Compatible Clients
+
+MCP is an open standard. This server works with any client that speaks the protocol:
+
+| Client | Notes |
+|---|---|
+| Claude Desktop | Native MCP support via `claude_desktop_config.json` |
+| Claude Code | Native MCP support via `.claude/settings.json` |
+| ChatGPT | Via MCP SuperAssistant extension (free) or Developer Mode (paid plans) |
+| Cursor | Native MCP support via settings |
+| Windsurf | Native MCP support via settings |
+| VS Code + Continue | MCP support through the Continue extension |
+| Cline | Native MCP support via settings |
+| Roo Code | Native MCP support via settings |
+
 ## What You Get
 
 ### Tools
@@ -54,6 +109,10 @@ node src/index.js
 | Tool | Description |
 |---|---|
 | `thought_clarifier` | Analyze free-form text through the NVC lens. Surfaces feelings, needs, and an optional request. |
+| `transform_message` | Rewrite any message (email, chat, feedback) using NVC principles. One-shot or guided mode. |
+| `nvc_trainer` | Interactive NVC practice exercises. Pick a topic and difficulty level. |
+| `political_debate` | Simulate a structured political debate between two parties using NVC principles. |
+| `submit_feedback` | Share suggestions, report issues, or tell us what you liked. Stored locally. |
 
 ### Resources
 
@@ -61,6 +120,7 @@ The NVC knowledge base is also available as browsable resources:
 
 | Resource | URI |
 |---|---|
+| Getting started guide | `nvc://intro` |
 | Feelings catalog | `nvc://catalogs/feelings` |
 | Needs catalog | `nvc://catalogs/needs` |
 | NVC principles | `nvc://knowledge/principles` |

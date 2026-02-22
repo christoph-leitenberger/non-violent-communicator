@@ -26,6 +26,22 @@ You choose the mode:
 
 **Example prompt:** "Can you help me rewrite this: 'You never listen to my suggestions in our planning meetings. I'm done trying to contribute.'"
 
+### `nvc_trainer`
+
+Your personal NVC coach. Pick a topic — observations, feelings, needs, or requests — and a difficulty level (beginner, intermediate, advanced), and get a tailored exercise that tests your understanding of that NVC building block. After you answer, you'll get detailed feedback grounded in the NVC knowledge base.
+
+**Try it:** Say "I want to practice NVC" and pick what you'd like to work on. Start with beginner if you're new — there's no rush.
+
+**Example prompt:** "Give me an intermediate exercise on feelings."
+
+### `political_debate`
+
+The NVC debate stage. Pick two political parties and a set of topics, and watch them engage in a structured four-phase debate — all grounded in NVC principles. Each side states observations, names feelings, identifies shared needs, and makes concrete requests. It's a demonstration of how even polarized positions can find common ground when the conversation structure changes.
+
+**Try it:** Name two parties (real or fictional) and a few topics you'd like them to debate.
+
+**Example prompt:** "Simulate a debate between the Green Party and the Libertarian Party on climate policy and housing."
+
 ### `submit_feedback`
 
 Found a bug? Have an idea? Just want to say thanks? Use this tool to send feedback. It's stored locally in `feedback.json` — no data leaves your machine.
