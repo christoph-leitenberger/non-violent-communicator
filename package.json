@@ -4,18 +4,10 @@
   "description": "NVC (Nonviolent Communication) tools for LLMs via MCP",
   "type": "module",
   "bin": {
-    "nvc-mcp": "src/index.js"
+    "nvc-mcp": "./index.js"
   },
-  "files": [
-    "src/",
-    "knowledge/",
-    "README.md",
-    "LICENSE"
-  ],
   "scripts": {
-    "start": "node src/index.js",
-    "validate": "bash validate.sh",
-    "test": "node --test test/index.test.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": ">=18"
