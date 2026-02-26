@@ -6,7 +6,8 @@ Nonviolent Communication tools for any LLM — via MCP or a copy-paste prompt.
 
 ### MCP users (Claude Desktop, Cursor, etc.)
 
-Add to your MCP client config (e.g. `claude_desktop_config.json`):
+1. Open your app's settings file (in Claude Desktop it's called `claude_desktop_config.json`)
+2. Paste the following block into it:
 
 ```json
 {
@@ -19,28 +20,24 @@ Add to your MCP client config (e.g. `claude_desktop_config.json`):
 }
 ```
 
-No API keys, no network calls. You get 4 tools — thought clarifier, message transformer, NVC trainer, and political discourse analyzer — plus a browsable NVC knowledge base.
+3. Save the file and restart the app
+
+That's it. No API keys, no internet connection needed. You now have 4 NVC tools and a browsable knowledge base.
 
 ### Claude Code users
 
-This repo includes `.claude/settings.json` — clone it and the NVC MCP server is configured automatically. Or add it manually to your project or global settings:
+1. Clone this repo: `git clone https://github.com/christoph-leitenberger/non-violent-communicator.git`
+2. Open the folder in Claude Code
 
-```json
-{
-  "mcpServers": {
-    "nvc": {
-      "command": "npx",
-      "args": ["non-violent-communicator"]
-    }
-  }
-}
-```
+It just works — the repo already includes the right settings file, so the NVC tools are ready to use.
 
 ### Any LLM (ChatGPT, Gemini, Copilot, etc.) — no install needed
 
-Open **[PROMPT.md](PROMPT.md)**, click the **copy raw file** button (clipboard icon, top-right), and paste it as the first message in any LLM chat. Done — your LLM is now an NVC assistant with all four capabilities.
+1. Open **[this prompt file](https://raw.githubusercontent.com/christoph-leitenberger/non-violent-communicator/master/PROMPT.md)**
+2. Select all the text and copy it
+3. Paste it as the first message in any LLM chat
 
-> **Direct link:** [Copy the raw prompt](https://raw.githubusercontent.com/christoph-leitenberger/non-violent-communicator/master/PROMPT.md) — select all, copy, paste into your chat.
+Done — your LLM is now an NVC assistant with all four tools.
 
 ## What You Get
 
@@ -50,6 +47,12 @@ Open **[PROMPT.md](PROMPT.md)**, click the **copy raw file** button (clipboard i
 | **Message Transformer** | Rewrite a difficult email, chat message, or feedback using NVC principles |
 | **NVC Trainer** | Practice identifying observations, feelings, needs, and requests with interactive exercises (3 difficulty levels) |
 | **Political Discourse** | Analyze political quotes through the NVC lens — surface life-alienating patterns and the human needs behind the rhetoric |
+
+### Why Political Discourse?
+
+Politicians often use aggressive, blaming, or vague language. This makes it hard to see what they actually want and whose needs they're serving. The Political Discourse tool strips away the rhetoric and shows you the real human needs hiding underneath.
+
+Imagine if politicians had to say clearly what they need — without distracting, blaming, or attacking. That's what this tool does: it translates political speech into honest, human language.
 
 ## Local development
 
